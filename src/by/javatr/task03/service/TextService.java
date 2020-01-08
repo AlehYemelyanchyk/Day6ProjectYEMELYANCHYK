@@ -26,6 +26,16 @@ public class TextService {
         text.setText(dataScanner.readString());
     }
 
+    public Text replaceCharWithAnotherCharRegex(Text text, int position, char replacement) throws IllegalArgumentException {
+        if (text == null) {
+            throw new IllegalArgumentException("Text can not be null");
+        }
+        String stringText = text.getText();
+        stringText = stringText.replaceAll("[^.]{" + position + "}[\\w]{1}", String.valueOf(replacement));
+        text.setText(stringText);
+        return text;
+    }
+
     public Text replaceCharWithAnotherCharNoRegex(Text text, int position, char replacement) throws IllegalArgumentException {
         if (!TextServiceValidationUtils.isTextNull(text)) {
             throw new IllegalArgumentException("Text can not be null");

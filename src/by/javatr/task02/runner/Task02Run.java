@@ -8,11 +8,19 @@ package by.javatr.task02.runner;
 //- в порядке возрастания (убывания) минимальных элементов строк матрицы.
 //Для сортировки методы класса Array не использовать! Основное требование избежать повтора кода.
 
+
 /**
  * @author Aleh Yemelyanchyk on 12/9/2019.
  */
 public class Task02Run {
 
     public static void main(String[] args) {
+        int[][] jaggedArray = new int[5][];
+
+        jaggedArray[0] = new int[]{3, 6, 23}; // 32
+        jaggedArray[1] = new int[]{2, 6, 23, 86, 23}; // 140
+        jaggedArray[2] = new int[]{32, 2}; // 34
+        jaggedArray[3] = new int[]{65, 3, 76, 22}; // 166
+        jaggedArray[4] = new int[]{65, 76, 23, 90, 5, 8}; // 267
     }
 }

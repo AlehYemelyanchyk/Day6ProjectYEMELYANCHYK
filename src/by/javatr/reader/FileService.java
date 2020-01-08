@@ -1,7 +1,5 @@
 package by.javatr.reader;
 
-import by.javatr.task01.model.MyIntArray;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,8 +10,7 @@ import java.io.IOException;
  */
 public class FileService {
 
-    public void readArrayFromFile(MyIntArray intArray, String fileName) {
-        int[] array = intArray.getIntArray();
+    public void readArrayFromFile(int [] array, String fileName) {
         int index = 0;
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             String line;
@@ -25,8 +22,6 @@ public class FileService {
             throw new IllegalArgumentException("The file contains not only integers.");
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            intArray.setIntArray(array);
         }
     }
 
